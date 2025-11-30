@@ -1,0 +1,82 @@
+/* 
+	System with three basic tasks:
+	S: period 100ms.
+	B: period 500ms.
+	V: period 125ms.
+*/
+
+OIL_VERSION = "2.5" : "test" ;
+
+CPU test {    
+  OS config {
+    STATUS = STANDARD;
+    BUILD = TRUE {
+      TRAMPOLINE_BASE_PATH = "/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline";  //set the path
+      APP_NAME = "LAB04_Syn"; // name of .hex
+      APP_SRC = "lab04_ex01.cpp"; //name of C code
+      CPPCOMPILER = "avr-g++";
+      COMPILER = "avr-gcc";
+      LINKER = "avr-gcc";
+      ASSEMBLER = "avr-gcc";
+      COPIER = "avr-objcopy";
+      SYSTEM = PYTHON;
+      
+      LIBRARY = serial; //call the serial
+    };
+    SYSTEM_CALL = TRUE;
+  };
+
+  APPMODE stdAppmode {};
+  
+  RESOURCE Res{
+    RESOURCEPROPERTY = STANDARD;
+  };
+
+
+  ALARM a100msec {
+    COUNTER = SystemCounter;
+    ACTION = ACTIVATETASK { TASK = TaskS; };
+    AUTOSTART = TRUE { APPMODE = stdAppmode; ALARMTIME = 98; CYCLETIME = 98; }; 
+  };
+ 
+  ALARM a500msec { //DO NOT FORGET TO TRANSFORM THE TIME
+    COUNTER = SystemCounter;
+    ACTION = ACTIVATETASK { TASK = TaskB; };
+    AUTOSTART = TRUE { APPMODE = stdAppmode; ALARMTIME = 488; CYCLETIME = 488; }; 
+    //Activated each 500ms (488 ticks)  (1.024ms=1 ticks) 
+  };
+
+  ALARM a125msec {
+    COUNTER = SystemCounter;
+    ACTION = ACTIVATETASK { TASK = TaskV; };
+    AUTOSTART = TRUE { APPMODE = stdAppmode; ALARMTIME = 122; CYCLETIME = 122; }; 
+  };
+
+//Priorities are assigned based on the order of tasks
+  TASK TaskS {
+    PRIORITY = 3;
+    AUTOSTART = TRUE { APPMODE = stdAppmode; };
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    RESOURCE = Res;
+  };
+
+  TASK TaskB {
+    PRIORITY = 2;
+    AUTOSTART = FALSE;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    RESOURCE = Res;
+  };
+
+  TASK TaskV {
+    PRIORITY = 1;
+    AUTOSTART = FALSE;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    RESOURCE = Res;
+  };
+
+
+  
+};

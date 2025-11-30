@@ -1,0 +1,22 @@
+build/lab04_ex01/tpl_invoque.S.o: lab04_ex01/tpl_invoque.S \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_os_application_def.h \
+ lab04_ex01/tpl_app_define.h \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_config_def.h \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_config_check.h \
+ lab04_ex01/tpl_service_ids.h \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/machines/avr/tpl_assembler.h \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_as_memmap.h
+
+/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_os_application_def.h:
+
+lab04_ex01/tpl_app_define.h:
+
+/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_config_def.h:
+
+/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_config_check.h:
+
+lab04_ex01/tpl_service_ids.h:
+
+/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/machines/avr/tpl_assembler.h:
+
+/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_as_memmap.h:

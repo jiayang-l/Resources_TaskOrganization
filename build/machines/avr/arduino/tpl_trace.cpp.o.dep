@@ -1,0 +1,16 @@
+build/machines/avr/arduino//tpl_trace.cpp.o: \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/machines/avr/arduino//tpl_trace.cpp \
+ lab04_ex01/tpl_app_define.h \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_config_def.h \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_config_check.h \
+ /usr/lib/gcc/avr/5.4.0/include/stdint.h /usr/lib/avr/include/stdint.h
+
+lab04_ex01/tpl_app_define.h:
+
+/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_config_def.h:
+
+/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_config_check.h:
+
+/usr/lib/gcc/avr/5.4.0/include/stdint.h:
+
+/usr/lib/avr/include/stdint.h:

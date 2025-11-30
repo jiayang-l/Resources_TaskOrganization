@@ -1,0 +1,68 @@
+build/os/tpl_os_timeobj_kernel.c.o: \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_os_timeobj_kernel.c \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_os_timeobj_kernel.h \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_os_internal_types.h \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/machines/avr/tpl_os_std_types.h \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_os_custom_types.h \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_os_application_def.h \
+ lab04_ex01/tpl_app_define.h \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_config_def.h \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_config_check.h \
+ lab04_ex01/tpl_app_custom_types.h \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_compiler.h \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/machines/avr/tpl_machine.h \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_os_custom_types.h \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_compiler.h \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_memmap.h \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/debug/tpl_debug.h \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_os_timeobj_kernel.h \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_memmap.h \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_os_definitions.h \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_os_kernel.h \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_os_multicore_macros.h \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_trace.h \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_os_types.h
+
+/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_os_timeobj_kernel.h:
+
+/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_os_internal_types.h:
+
+/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/machines/avr/tpl_os_std_types.h:
+
+/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_os_custom_types.h:
+
+/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_os_application_def.h:
+
+lab04_ex01/tpl_app_define.h:
+
+/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_config_def.h:
+
+/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_config_check.h:
+
+lab04_ex01/tpl_app_custom_types.h:
+
+/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_compiler.h:
+
+/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/machines/avr/tpl_machine.h:
+
+/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_os_custom_types.h:
+
+/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_compiler.h:
+
+/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_memmap.h:
+
+/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/debug/tpl_debug.h:
+
+/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_os_timeobj_kernel.h:
+
+/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_memmap.h:
+
+/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_os_definitions.h:
+
+/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_os_kernel.h:
+
+/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_os_multicore_macros.h:
+
+/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_trace.h:
+
+/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/os/tpl_os_types.h:

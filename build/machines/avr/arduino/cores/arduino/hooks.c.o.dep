@@ -1,0 +1,2 @@
+build/machines/avr/arduino/cores/arduino/hooks.c.o: \
+ /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/machines/avr/arduino/cores/arduino/hooks.c
