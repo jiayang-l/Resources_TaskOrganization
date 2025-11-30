@@ -1,7 +1,6 @@
 /* 
-	System with three basic tasks:
-	S: period 100ms.
-	B: period 500ms.
+	System with 2 basic tasks:
+	W: period 100ms.
 	V: period 125ms.
 */
 
@@ -12,8 +11,8 @@ CPU test {
     STATUS = STANDARD;
     BUILD = TRUE {
       TRAMPOLINE_BASE_PATH = "/home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline";  //set the path
-      APP_NAME = "LAB04_Syn"; // name of .hex
-      APP_SRC = "lab04_ex01.cpp"; //name of C code
+      APP_NAME = "LAB04_Tasks"; // name of .hex
+      APP_SRC = "lab04_ex02.cpp"; //name of C code
       CPPCOMPILER = "avr-g++";
       COMPILER = "avr-gcc";
       LINKER = "avr-gcc";
@@ -35,15 +34,8 @@ CPU test {
 
   ALARM a100msec {
     COUNTER = SystemCounter;
-    ACTION = ACTIVATETASK { TASK = TaskS; };
-    AUTOSTART = TRUE { APPMODE = stdAppmode; ALARMTIME = 98; CYCLETIME = 98; }; 
-  };
- 
-  ALARM a500msec { //DO NOT FORGET TO TRANSFORM THE TIME
-    COUNTER = SystemCounter;
-    ACTION = ACTIVATETASK { TASK = TaskB; };
-    AUTOSTART = TRUE { APPMODE = stdAppmode; ALARMTIME = 488; CYCLETIME = 488; }; 
-    //Activated each 500ms (488 ticks)  (1.024ms=1 ticks) 
+    ACTION = ACTIVATETASK { TASK = TaskW; };
+    AUTOSTART = TRUE { APPMODE = stdAppmode; ALARMTIME = 10; CYCLETIME = 98; }; 
   };
 
   ALARM a125msec {
@@ -52,8 +44,8 @@ CPU test {
     AUTOSTART = TRUE { APPMODE = stdAppmode; ALARMTIME = 122; CYCLETIME = 122; }; 
   };
 
-//Priorities are assigned based on the order of tasks
-  TASK TaskS {
+//Priorities are assigned based on the order and logic of tasks
+  TASK TaskW {
     PRIORITY = 3;
     AUTOSTART = TRUE { APPMODE = stdAppmode; };
     ACTIVATION = 1;
@@ -61,13 +53,6 @@ CPU test {
     RESOURCE = Res;
   };
 
-  TASK TaskB {
-    PRIORITY = 1;
-    AUTOSTART = FALSE;
-    ACTIVATION = 1;
-    SCHEDULE = FULL;
-    RESOURCE = Res;
-  };
 
   TASK TaskV {
     PRIORITY = 2;
@@ -76,7 +61,6 @@ CPU test {
     SCHEDULE = FULL;
     RESOURCE = Res;
   };
-
 
   
 };
