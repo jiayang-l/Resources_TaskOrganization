@@ -1,9 +1,0 @@
-lab04_ex01.oil: \
- /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/goil/templates/config/config.oil \
- /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/goil/templates/config/kernel.oil \
- /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/goil/templates/config/api.oil \
- /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/goil/templates/config/api_ioc.oil \
- /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/goil/templates/config/avr/config.oil \
- /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/goil/templates/config/avr/arduino/config.oil \
- /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/goil/templates/config/avr/arduino/uno/config.oil \
- /home/ubuntu22/Desktop/MyProjects/OSLabs/trampoline/goil/templates/config/config2.5.oil
