@@ -35,7 +35,7 @@ CPU test {
   ALARM a100msec {
     COUNTER = SystemCounter;
     ACTION = ACTIVATETASK { TASK = TaskW; };
-    AUTOSTART = TRUE { APPMODE = stdAppmode; ALARMTIME = 10; CYCLETIME = 98; }; 
+    AUTOSTART = TRUE { APPMODE = stdAppmode; ALARMTIME = 98; CYCLETIME = 98; }; 
   };
 
   ALARM a125msec {
