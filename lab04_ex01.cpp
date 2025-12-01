@@ -23,9 +23,9 @@ DeclareAlarm(a500msec);
 DeclareAlarm(a125msec);
 DeclareResource(Res);
 
-// The TASKs are activated by the alarms "a500msec","a100msec","a125msec
+// The TASKs are activated by the alarms "a500msec","a100msec","a125msec"
 
-/*  Periodic Sampler C: reads S and A0 each 100 ms */
+/*  Periodic Sampler S: reads A0 each 100 ms */
 
 TASK(TaskS)
 {
@@ -68,7 +68,7 @@ TASK(TaskB)
     Serial.print("TaskB running:");
     if (q_count == 0)
     {
-        // No data in this window -> define no alarm variation
+        // No data in this window
         alarm = 0;
     }
     else
