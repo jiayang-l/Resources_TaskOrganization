@@ -21,13 +21,13 @@ void setup()
 
 DeclareAlarm(a100msec);
 DeclareAlarm(a125msec);
-DeclareResource(Res);
+// DeclareResource(Res);
 
 // The TASKs are activated by the alarms "a100msec","a125msec
 static int w_counter = 0; // count activations of W
 TASK(TaskW)
 {
-    GetResource(Res);
+    // GetResource(Res);
 
     Serial.print("TaskW running:");
     int X = analogRead(A0); // read voltage on pin A0
@@ -44,7 +44,7 @@ TASK(TaskW)
     Serial.print(X);
     Serial.print(" error=");
     Serial.println(error);
-    ReleaseResource(Res);
+    // ReleaseResource(Res);
 
     // Push into queue if there is space
     if (q_count < K)
@@ -67,9 +67,9 @@ TASK(TaskW)
 
         if (q_count == 0)
         {
-            GetResource(Res);
+            // GetResource(Res);
             alarm = 0;
-            ReleaseResource(Res);
+            // ReleaseResource(Res);
         }
         else
         {
@@ -96,7 +96,7 @@ TASK(TaskW)
             Serial.println(M - N);
 
             // Now queue is empty, we have N and M for this period
-            GetResource(Res);
+            // GetResource(Res);
             if ((M - N) > 500)
             {
                 alarm = 1;
@@ -105,7 +105,7 @@ TASK(TaskW)
             {
                 alarm = 0;
             }
-            ReleaseResource(Res);
+            // ReleaseResource(Res);
         }
         Serial.print("alarm=");
         Serial.println(alarm);
@@ -124,10 +124,10 @@ TASK(TaskV)
     int local_error;
     int local_alarm;
     /* Read shared flags under protection */
-    GetResource(Res);
+    // GetResource(Res);
     local_error = error;
     local_alarm = alarm;
-    ReleaseResource(Res);
+    // ReleaseResource(Res);
 
     /* Decide LED mode */
     if (local_error == 1)
