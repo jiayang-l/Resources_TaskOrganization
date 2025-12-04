@@ -27,11 +27,6 @@ CPU test {
 
   APPMODE stdAppmode {};
   
-  RESOURCE Res{
-    RESOURCEPROPERTY = STANDARD;
-  };
-
-
   ALARM a100msec {
     COUNTER = SystemCounter;
     ACTION = ACTIVATETASK { TASK = TaskW; };
@@ -50,7 +45,6 @@ CPU test {
     AUTOSTART = TRUE { APPMODE = stdAppmode; };
     ACTIVATION = 1;
     SCHEDULE = FULL;
-    //RESOURCE = Res;
   };
 
 
@@ -59,7 +53,6 @@ CPU test {
     AUTOSTART = FALSE;
     ACTIVATION = 1;
     SCHEDULE = FULL;
-    //RESOURCE = Res;
   };
 
   

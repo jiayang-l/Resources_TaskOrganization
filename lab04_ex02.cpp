@@ -27,8 +27,6 @@ DeclareAlarm(a125msec);
 static int w_counter = 0; // count activations of W
 TASK(TaskW)
 {
-    // GetResource(Res);
-
     Serial.print("TaskW running:");
     int X = analogRead(A0); // read voltage on pin A0
     if (X < 10 || X > 1013) // Check range and set error
@@ -44,7 +42,6 @@ TASK(TaskW)
     Serial.print(X);
     Serial.print(" error=");
     Serial.println(error);
-    // ReleaseResource(Res);
 
     // Push into queue if there is space
     if (q_count < K)
@@ -67,9 +64,7 @@ TASK(TaskW)
 
         if (q_count == 0)
         {
-            // GetResource(Res);
             alarm = 0;
-            // ReleaseResource(Res);
         }
         else
         {
@@ -96,7 +91,6 @@ TASK(TaskW)
             Serial.println(M - N);
 
             // Now queue is empty, we have N and M for this period
-            // GetResource(Res);
             if ((M - N) > 500)
             {
                 alarm = 1;
@@ -105,7 +99,6 @@ TASK(TaskW)
             {
                 alarm = 0;
             }
-            // ReleaseResource(Res);
         }
         Serial.print("alarm=");
         Serial.println(alarm);
@@ -123,12 +116,8 @@ TASK(TaskV)
     Serial.print("TaskV running:");
     int local_error;
     int local_alarm;
-    /* Read shared flags under protection */
-    // GetResource(Res);
     local_error = error;
     local_alarm = alarm;
-    // ReleaseResource(Res);
-
     /* Decide LED mode */
     if (local_error == 1)
     {
